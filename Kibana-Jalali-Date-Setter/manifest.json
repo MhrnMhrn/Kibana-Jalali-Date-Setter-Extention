@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Kibana Jalali Date Setter",
+  "version": "1.0",
+  "description": "Set the date range for a Kibana dashboard.",
+  "permissions": ["tabs", "activeTab", "http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://your-domain.com/app/dashboards*"],
+      "css": ["pikaday.css",  "styles.css"],
+      "js": ["moment.min.js", "moment-jalaali.min.js", "content.js", "pikaday.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

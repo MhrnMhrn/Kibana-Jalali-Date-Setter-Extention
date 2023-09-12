@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
+
+/* Add any additional styling below. For example: */
+body, input, button, span, div {
+  font-family: 'Vazir', sans-serif;
+}
