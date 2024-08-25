@@ -25,8 +25,8 @@ function insertInputs() {
     const instruction = document.createElement('div');
     instruction.innerText = 'لطفا بازه زمانی مورد نظر خود را انتخاب کنید';
     containerDiv.appendChild(instruction);
-    instruction.style.marginTop = '10px'
-    instruction.style.fontSize = '15px'
+    instruction.style.marginTop = '10px';
+    instruction.style.fontSize = '15px';
 
     const lineBreak = document.createElement('br');
     containerDiv.appendChild(lineBreak);
@@ -34,7 +34,7 @@ function insertInputs() {
     const div = document.createElement('div');
     div.style.display = 'flex';
     div.style.alignItems = 'center';
-    div.style.marginBottom = '5px'
+    div.style.marginBottom = '5px';
 
     const toDateLabel = document.createElement('span');
     toDateLabel.innerText = 'تا تاریخ:';
@@ -64,7 +64,7 @@ function insertInputs() {
     setDateButton.innerText = 'اعمال تاریخ';
     setDateButton.style.borderRadius = '4px';
     setDateButton.style.border = '1px solid black';
-    setDateButton.style.padding = '4px'
+    setDateButton.style.padding = '4px';
     div.appendChild(setDateButton);
 
     containerDiv.appendChild(div);
@@ -73,12 +73,12 @@ function insertInputs() {
     // Initialize PikadayJalali
     new Pikaday({
       field: document.getElementById('fromDateInput'),
-      isJalaali: true
+      isJalaali: true,
     });
 
     new Pikaday({
       field: document.getElementById('toDateInput'),
-      isJalaali: true
+      isJalaali: true,
     });
 
     setDateButton.addEventListener('click', function () {
@@ -93,13 +93,17 @@ function insertInputs() {
       // Extract the current URL
       const currentUrl = window.location.href;
 
-      // Parse current URL to extract dashboard ID and other parts
+      // Handle URLs with or without space name
+      const baseUrlPattern = /^(.*\/app\/dashboards)/;
+      const baseUrlMatch = currentUrl.match(baseUrlPattern);
+      const baseAndPath = baseUrlMatch ? baseUrlMatch[1] : '';
+
       const hashParts = currentUrl.split('#');
       const hashSubParts = hashParts[1].split('?');
       const dashboardId = hashSubParts[0].split('/view/')[1];
 
       // Create a new URL with the updated time range
-      const newUrl = `https://your-domain.com/app/dashboards#/view/${dashboardId}?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'${encodeURIComponent(fromDateISO)}',to:'${encodeURIComponent(toDateISO)}'))`;
+      const newUrl = `${baseAndPath}#/view/${dashboardId}?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'${encodeURIComponent(fromDateISO)}',to:'${encodeURIComponent(toDateISO)}'))`;
 
       // Redirect to the new URL
       window.location.href = newUrl;
