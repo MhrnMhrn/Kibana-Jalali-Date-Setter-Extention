@@ -36,18 +36,6 @@ function insertInputs() {
     div.style.alignItems = 'center';
     div.style.marginBottom = '5px'
 
-    const fromDateLabel = document.createElement('span');
-    fromDateLabel.innerText = 'از تاریخ:';
-    div.appendChild(fromDateLabel);
-
-    const fromDateInput = document.createElement('input');
-    fromDateInput.type = 'text';
-    fromDateInput.id = 'fromDateInput';
-    fromDateInput.placeholder = 'jYYYY/jMM/jDD';
-    fromDateInput.style.borderRadius = '4px';
-    fromDateInput.style.margin = '0 10px';
-    div.appendChild(fromDateInput);
-
     const toDateLabel = document.createElement('span');
     toDateLabel.innerText = 'تا تاریخ:';
     div.appendChild(toDateLabel);
@@ -59,6 +47,18 @@ function insertInputs() {
     toDateInput.style.borderRadius = '4px';
     toDateInput.style.margin = '0 10px';
     div.appendChild(toDateInput);
+
+    const fromDateLabel = document.createElement('span');
+    fromDateLabel.innerText = 'از تاریخ:';
+    div.appendChild(fromDateLabel);
+
+    const fromDateInput = document.createElement('input');
+    fromDateInput.type = 'text';
+    fromDateInput.id = 'fromDateInput';
+    fromDateInput.placeholder = 'jYYYY/jMM/jDD';
+    fromDateInput.style.borderRadius = '4px';
+    fromDateInput.style.margin = '0 10px';
+    div.appendChild(fromDateInput);
 
     const setDateButton = document.createElement('button');
     setDateButton.innerText = 'انتخاب تاریخ';
