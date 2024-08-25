@@ -3,11 +3,16 @@
   "name": "Kibana Jalali Date Setter",
   "version": "1.0",
   "description": "Set the date range for a Kibana dashboard.",
-  "permissions": ["tabs", "activeTab", "http://*/*", "https://*/*"],
+  "permissions": ["tabs", "activeTab"],
   "content_scripts": [
     {
-      "matches": ["https://your-domain.com/app/dashboards*"],
-      "css": ["pikaday.css",  "styles.css"],
+      "matches": [
+        "https://your-kibana-domain.com/app/dashboards*",
+        "http://your-kibana-domain.com/app/dashboards*",
+        "https://your-kibana-domain.com/s/*/app/dashboards*",
+        "http://your-kibana-domain.com/s/*/app/dashboards*"
+      ],
+      "css": ["pikaday.css", "styles.css"],
       "js": ["moment.min.js", "moment-jalaali.min.js", "content.js", "pikaday.js"]
     }
   ],
