@@ -61,7 +61,7 @@ function insertInputs() {
     div.appendChild(fromDateInput);
 
     const setDateButton = document.createElement('button');
-    setDateButton.innerText = 'انتخاب تاریخ';
+    setDateButton.innerText = 'اعمال تاریخ';
     setDateButton.style.borderRadius = '4px';
     setDateButton.style.border = '1px solid black';
     setDateButton.style.padding = '4px'
