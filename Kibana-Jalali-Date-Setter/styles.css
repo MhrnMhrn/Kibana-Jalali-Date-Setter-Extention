@@ -1,6 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
+@font-face {
+  font-family: 'Kalameh';
+  src: url('./KalamehWeb/woff2/KalamehWeb_thin.woff2') format('woff2'),
+       url('./KalamehWeb/woff/KalamehWeb_thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
 
-/* Add any additional styling below. For example: */
-body, input, button, span, div {
-  font-family: 'Vazir', sans-serif;
+@font-face {
+  font-family: 'Kalameh';
+  src: url('./KalamehWeb/woff2/KalamehWeb_Regular.woff2') format('woff2'),
+       url('./KalamehWeb/woff/KalamehWeb_Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kalameh';
+  src: url('./KalamehWeb/woff2/KalamehWeb_Bold.woff2') format('woff2'),
+       url('./KalamehWeb/woff/KalamehWeb_Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kalameh';
+  src: url('./KalamehWeb/woff2/KalamehWeb_Black.woff2') format('woff2'),
+       url('./KalamehWeb/woff/KalamehWeb_Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Apply Kalameh font to all relevant text elements */
+body, input, button, span, div, h1, h2, h3, h4, h5, h6, p, label, table, th, td, dl, dt, dd, caption, .echCanvasRenderer text, .echScreenReaderOnly p, .echChart text {
+  font-family: 'Kalameh', sans-serif !important;
+  font-weight: inherit;
+}
+
+/* Ensure RTL for text in tables and paragraphs */
+table td, table th, p {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Specific LTR direction for numbers */
+.number-ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Keep inputs LTR where needed */
+input[type="text"] {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Fix for table content RTL with left alignment */
+.euiDataGridRowCell__expandContent {
+  direction: rtl !important;
+  text-align: left !important;
+}
+
+.euiDataGridRowCell__truncate {
+  direction: rtl !important;
+  text-align: left !important;
 }
