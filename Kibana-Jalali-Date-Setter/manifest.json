@@ -13,7 +13,8 @@
         "http://your-kibana-domain.com/s/*/app/dashboards*"
       ],
       "css": ["pikaday.css", "styles.css"],
-      "js": ["moment.min.js", "moment-jalaali.min.js", "content.js", "pikaday.js"]
+      "js": ["moment.min.js", "moment-jalaali.min.js", "content.js", "pikaday.js"],
+      "all_frames": true
     }
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
