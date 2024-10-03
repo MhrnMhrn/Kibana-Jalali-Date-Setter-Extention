@@ -6,6 +6,8 @@ This is a Chromium browser extension designed to set the date range for a Kibana
 
 ![Extension Screenshot](./screenshot.png)
 
+[Download On Chrome web store](https://chromewebstore.google.com/detail/kibana-jalali-date-setter/hpoegiodadagdnelficfklmidgkcfemp)
+
 ## Prerequisites
 
 - Chromium-based browser (Google Chrome, Brave, Microsoft Edge, etc.)
